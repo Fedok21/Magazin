@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+</head>
+<body>
+    <h1>Register</h1>
+    {% if error_message %}
+        <p style="color: red;">{{ error_message }}</p>
+    {% endif %}
+    <form method="post">
+        <label for="lastname">Last Name:</label>
+        <input type="text" name="lastname" id="lastname" required><br>
+
+        <label for="firstname">First Name:</label>
+        <input type="text" name="firstname" id="firstname" required><br>
+
+        <label for="middlename">Middle Name:</label>
+        <input type="text" name="middlename" id="middlename"><br>
+
+        <label for="gender">Gender:</label>
+        <select name="gender" id="gender" required>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select><br>
+
+        <label for="age">Age:</label>
+        <input type="number" name="age" id="age" required><br>
+
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username" required><br>
+
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" required><br>
+
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>
